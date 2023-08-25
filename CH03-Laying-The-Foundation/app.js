@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 //const headings = <h1>Using JSX</h1> // single line
 
@@ -10,16 +10,13 @@ import ReactDOM from 'react-dom/client';
  */
 //React Component
 
+const title = "React Element";
+const headingComponent = <h1>{title}</h1>;
 
- const HeadingComponent = () => (
-    <h1>Component</h1>
- )
-
- const ParagraphComponent = () => (
-    <div id="container">
-        <HeadingComponent />
-       <p>Functional Components</p>
-    </div>
-    )
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<ParagraphComponent/>)
+const Container = () => (
+  <div id="container">
+    {headingComponent}
+  </div>
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Container />);
